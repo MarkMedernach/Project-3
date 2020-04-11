@@ -1,7 +1,16 @@
 {
-  "name": "node-api-postgres",
+  "name": "project-3",
   "version": "1.0.0",
-  "description": "RESTful API with Node.js, Express, and PostgreSQL",
-  "main": "index.js",
-  "license": "MIT"
+  "description": "",
+  "main": "Query_Functions.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node Query_Functions.js"
+  },
+  "author": "",
+  "license": "ISC"
 }

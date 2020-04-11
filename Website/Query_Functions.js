@@ -1,4 +1,6 @@
-function datapull(x) {const {Client} = require('pg')
+function datapull(x) {
+  
+const {Client} = require('pg')
 
 const client = new Client({
   user:"postgres",
@@ -14,10 +16,7 @@ client.connect()
 .then(results => console.table(results.rows))
 .catch(e => console.log(e))
 .finally(() => client.end())
-}
-
-datapull('Select * from covid');
-
-module.exports = {
-  datapull,
 };
+
+data = datapull('Select * from covid');
+console.log(data);
