@@ -1,16 +1,12 @@
 {
-  "name": "project-3",
+  "name": "Project_3",
   "version": "1.0.0",
   "description": "",
-  "main": "Query_Functions.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "pg": "^8.0.2"
-  },
-  "devDependencies": {},
+  "main": "config.js",
   "scripts": {
-    "test": "node Query_Functions.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC"
 }
