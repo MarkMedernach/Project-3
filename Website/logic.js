@@ -1,7 +1,7 @@
 
 
 $.getJSON("theRona.json", function(json) {
-    //console.log(json); // this will show the info it in firebug console
+    //console.log(json); // this will show the info it in console
     theRona = json;
 
 
@@ -22,7 +22,7 @@ var cases = [];
 var deaths = [];
 
 for (var i = 0; i < theRona.length; i++){
-    // if (theRona[i].lat !== null && theRona[i].long !== null) {
+    if (theRona[i].lat !== null && theRona[i].long !== null && theRona[i].country !== null) {
     console.log(i, theRona[i].long)
     cases.push(
         L.circle([theRona[i].lat, parseFloat(theRona[i].long)], {
@@ -39,7 +39,7 @@ for (var i = 0; i < theRona.length; i++){
         fillColor: "red",
         radius: theRona[i].deaths * 15
         })
-    )};
+    )}};
 ;
 
 console.log(deaths);
