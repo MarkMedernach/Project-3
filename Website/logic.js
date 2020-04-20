@@ -26,17 +26,17 @@ for (var i = 0; i < theRona.length; i++){
     console.log(i, theRona[i].long)
     cases.push(
         L.circle([theRona[i].lat, parseFloat(theRona[i].long)], {
-            fillOpacity: .75,
-            color: "orange",
-            fillColor: "orange",
+            fillOpacity: .25,
+            color: "red",
+            fillColor: "red",
             radius: theRona[i].cases * 5
         })
     );
     deaths.push(
     L.circle([theRona[i].lat, parseFloat(theRona[i].long)], {
         fillOpacity: .75,
-        color: "red",
-        fillColor: "red",
+        color: "black",
+        fillColor: "black",
         radius: theRona[i].deaths * 15
         })
     )}};
