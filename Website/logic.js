@@ -23,14 +23,14 @@ var deaths = [];
 
 for (var i = 0; i < theRona.length; i++){
     if (theRona[i].lat !== null && theRona[i].long !== null && theRona[i].country !== null) {
-    console.log(i, theRona[i].long)
+    var caseToDeathRatio = Math.round(theRona[i].deaths/theRona[i].cases*100)
     cases.push(
         L.circle([theRona[i].lat, parseFloat(theRona[i].long)], {
             fillOpacity: .25,
             color: "red",
             fillColor: "red",
             radius: theRona[i].cases * 5
-        })
+        }).bindPopup("<h3>Country: " + theRona[i].country_name + "</h3><h3>Cases: " + theRona[i].cases + "<h3><h3>Deaths: " + theRona[i].deaths + "</h3><h3>Death to Case Ratio: " + caseToDeathRatio + "%</h3>")
     );
     deaths.push(
     L.circle([theRona[i].lat, parseFloat(theRona[i].long)], {
@@ -38,7 +38,7 @@ for (var i = 0; i < theRona.length; i++){
         color: "black",
         fillColor: "black",
         radius: theRona[i].deaths * 15
-        })
+        }).bindPopup("<h3>Country: " + theRona[i].country_name + "</h3><h3>Cases: " + theRona[i].cases + "<h3><h3>Deaths: " + theRona[i].deaths + "</h3><h3>Death to Case Ratio: " + caseToDeathRatio + "%</h3>")
     )}};
 ;
 
